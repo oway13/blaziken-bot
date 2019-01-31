@@ -57,7 +57,7 @@ async def nest(ctx, *, content: str):
             await ctx.send("New "+nestmon+" nest added: "+name+"")
         else:
             nestmon = "unassigned"
-            await ctx.send("New unassigned nest added: "+name+". Use !nest <nest name> <pokemon> to assign a pokemon to the nest")
+            await ctx.send("New unassigned nest added: "+name+". Use %nest <nest name> <pokemon> to assign a pokemon to the nest")
         nests[name] = nestmon
         with open('nests.json', 'w') as nest:
             json.dump(nests, nest)
